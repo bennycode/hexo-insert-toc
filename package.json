@@ -1,0 +1,51 @@
+{
+  "bugs": {
+    "url": "https://github.com/bennycode/hexo-insert-toc/issues"
+  },
+  "dependencies": {
+    "markdown-toc": "1.2.0"
+  },
+  "description": "A Hexo plugin to insert a table of contents (TOC) in Hexo posts and pages.",
+  "devDependencies": {
+    "@arkweid/lefthook": "0.7.7",
+    "generate-changelog": "1.8.0",
+    "prettier": "2.6.2",
+    "pretty-quick": "3.1.3"
+  },
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/bennycode/hexo-insert-toc#readme",
+  "keywords": [
+    "contents",
+    "hexo",
+    "include",
+    "index",
+    "insert",
+    "markdown",
+    "plugin",
+    "toc"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "hexo-insert-toc",
+  "peerDependencies": {
+    "hexo-util": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bennycode/hexo-insert-toc.git"
+  },
+  "scripts": {
+    "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: updated CHANGELOG.md\"",
+    "dist": "exit 0",
+    "fix": "prettier --write .",
+    "postversion": "git push origin && git push origin --tags && npm publish",
+    "preversion": "git checkout main && git pull && yarn && yarn test && yarn dist",
+    "release:major": "generate-changelog -M -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version major",
+    "release:minor": "generate-changelog -m -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version minor",
+    "release:patch": "generate-changelog -p -x \"chore,docs,refactor,style,test\" && yarn changelog:commit && npm version patch",
+    "test": "exit 0"
+  },
+  "version": "0.0.0"
+}
