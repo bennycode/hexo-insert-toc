@@ -1,3 +1,9 @@
+#### 1.1.2 (2022-08-08)
+
+##### Bug Fixes
+
+- Work with forward slashes ([039d1262](https://github.com/bennycode/hexo-insert-toc/commit/039d126278ffb5e318076aecee25de31c702c3ed))
+
 #### 1.1.1 (2022-05-04)
 
 ### 1.1.0 (2022-05-04)
