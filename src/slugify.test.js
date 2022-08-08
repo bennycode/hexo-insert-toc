@@ -12,4 +12,8 @@ describe('slugify', () => {
   it('handles colons', () => {
     expect(slugify('Bonus: TypeScript everything!')).toBe('Bonus-TypeScript-everything');
   });
+
+  it('handles forward slashes', () => {
+    expect(slugify('Type Argument / Type Parameter')).toBe('Type-Argument-x2F-Type-Parameter');
+  });
 });
