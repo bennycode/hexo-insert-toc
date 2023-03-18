@@ -1,5 +1,3 @@
-/* globals hexo: true */
-
 const filter = require('./filter');
 
 const config = hexo.config['hexo-insert-toc'] || {};
